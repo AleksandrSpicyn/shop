@@ -21,4 +21,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('elements')->group(function (): void {
     Route::get('', [ElementController::class, 'index']);
+    Route::get('{element}', [ElementController::class, 'show']);
 });
